@@ -27,7 +27,7 @@ class Booking(models.Model):
     start_date = models.DateTimeField(null=False, blank=False)
     end_date = models.DateTimeField(null=False, blank=False)
     total_price = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False)
-    status = models.CharField(null=False, blank=False, choices=Status.choices)
+    status = models.CharField(max_length=50, null=False, blank=False, choices=Status.choices)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
 
     def __str__(self):

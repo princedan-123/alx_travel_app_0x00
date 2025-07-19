@@ -20,14 +20,15 @@ env = Env(
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-Env.read_env(path.join(BASE_DIR, '.env'))
 
+
+Env.read_env(path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-+gl^wer0qld(j^0uu%%-%5+4&l=uzjn+3t%x816ajn*2=0q=84'
+SECRET_KEY = 'django-insecure-i0f&w%9jnrwdy4(6i-us-9qxpgs5(5juu7tmwo!nvh7a31srf#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -44,6 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'listings',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
