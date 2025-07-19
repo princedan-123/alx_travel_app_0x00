@@ -2,6 +2,7 @@
 from django.core.management.base import BaseCommand, CommandError
 from datetime import datetime, timedelta
 from listings.models import Status, Listing, Booking, Review
+from django.utils import timezone
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
@@ -13,8 +14,8 @@ class Command(BaseCommand):
             )
         # create an instance of Booking
         booking = Booking.objects.create(
-            listing=listing, start_date=datetime.now(),
-            end_date=datetime.now() + timedelta(days=5),
+            listing=listing, start_date=timezone.now(),
+            end_date=timezone.now() + timedelta(days=5),
             total_price=1000.00,
             status='Confirmed',
             )
